@@ -1,5 +1,7 @@
 module.exports = {
-  content: ["./src/**/*.tsx"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors:{
@@ -9,7 +11,7 @@ module.exports = {
         }
       },
       borderRadius:{
-        md: '4px'
+        md:'4px'
       }
     },
   },
