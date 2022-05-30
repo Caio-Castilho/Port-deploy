@@ -44,7 +44,7 @@ export function FeedbackContentStep({
 
     return (
         <>
-            <header className="min-h-0">
+            <header className="min-h-0 text-[#c8d0ef]">
                 <button 
                     type="button" 
                     className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100"
