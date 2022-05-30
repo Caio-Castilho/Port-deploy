@@ -3,6 +3,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'sm': {'min': '0px', 'max': '640px'}
+    },
     extend: {
       colors:{
         brand:{
