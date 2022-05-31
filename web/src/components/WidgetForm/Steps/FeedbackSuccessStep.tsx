@@ -9,7 +9,7 @@ export function FeedbackSuccessStep({
 }: FeedbackSuccessStepProps) {
     return (
         <>
-            <header>
+            <header className="min-h-0 text-[#c8d0ef]">
                 <CloseButton />
             </header>
             <div className="flex flex-col items-center py-10 w-[304px]">

@@ -1,6 +1,12 @@
 module.exports = {
-  content: ["./src/**/*.tsx"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
+    screens: {
+      'sm': {'min': '0px', 'max': '600px'},
+      'md': {'min': '641px', 'max': '1280px'}
+    },
     extend: {
       colors:{
         brand:{
@@ -9,7 +15,7 @@ module.exports = {
         }
       },
       borderRadius:{
-        md: '4px'
+        md:'4px'
       }
     },
   },
