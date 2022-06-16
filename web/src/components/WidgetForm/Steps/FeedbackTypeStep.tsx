@@ -1,5 +1,6 @@
 import { FeedbackType, feedbackTypes } from ".."
 import { CloseButton } from "../../CloseButton";
+import Image from 'next/image';
 
 interface FeedbackTypeStepProps {
     onFeedbackTypeChanged: (type: FeedbackType) => void;
@@ -21,7 +22,7 @@ export function FeedbackTypeStep({onFeedbackTypeChanged}: FeedbackTypeStepProps)
                             onClick={() => onFeedbackTypeChanged(key as FeedbackType)}
                             type="button"
                         >
-                            <img src={value.image.source} alt={value.image.alt}/>
+                            <Image src={value.image.source} alt={value.image.alt}/>
                             <span>{value.title}</span>
                         </button>
                     )
