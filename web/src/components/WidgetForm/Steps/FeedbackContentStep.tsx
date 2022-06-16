@@ -5,6 +5,7 @@ import { api } from "../../../lib/api";
 import { CloseButton } from "../../CloseButton"
 import { Loading } from "../../Loading";
 import { ScreenshotButton } from "../ScreenshotButton";
+import Image from 'next/image';
 
 interface FeedbackContentStepProps {
     feedbackType: FeedbackType;
@@ -53,7 +54,7 @@ export function FeedbackContentStep({
                     <ArrowLeft weight="bold" className="w-4 h-4"/>
                 </button>
                 <span className="text-xl leading-6 flex items-center gap-2">
-                    <img src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} className="w-6 h-6" />
+                    <Image src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} className="w-6 h-6" />
                     {feedbackTypeInfo.title}
                 </span>
                 <CloseButton />

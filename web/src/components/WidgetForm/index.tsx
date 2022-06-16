@@ -5,6 +5,7 @@ import thoughtImageUrl from '../../assets/thought.svg';
 import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
 import { FeedbackContentStep } from "./Steps/FeedbackContentStep";
 import { FeedbackSuccessStep } from "./Steps/FeedbackSuccessStep";
+import Image from 'next/image';
 
 export const feedbackTypes = {
     BUG:{
