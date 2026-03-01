@@ -431,7 +431,7 @@ export default function HomePages(){
         <section className={`section sec5 header ${toggle === "contact" ? "active":""}`} id="contact">
             <div className="contact-container">
                 <div className="main-title">
-                    <h2>Entre em <span>Contato</span><span className="bg-text">Redes Sociais</span></h2>
+                    <h2>Entre em <span>Contato</span><span className="bg-text"></span></h2>
                 </div>
                 <div className="contact-content-con">
                     <div className="left-contact">
