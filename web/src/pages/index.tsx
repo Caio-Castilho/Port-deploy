@@ -49,7 +49,7 @@ export default function HomePages(){
                     longo da minha linha do tempo como programador.
                 </p>
                 <div className="btn-con">
-                    <a href="https://drive.google.com/drive/folders/1lo9Wzz8nSBUjlvL98thgrkWffwfBkj3F?usp=sharing" className="main-btn">
+                    <a href="/CV-Caio-Fernandes-Castilho.pdf" download className="main-btn">
                         <span className="btn-text">Download CV</span>
                         <span className="btn-icon"><i className="fas fa-download"></i></span>
                     </a>
@@ -74,7 +74,7 @@ export default function HomePages(){
                         críticas com intenção de evoluir de maneira cognitiva. <br/>
                     </p>
                     <div className="btn-con">
-                        <a href="https://drive.google.com/drive/folders/1lo9Wzz8nSBUjlvL98thgrkWffwfBkj3F?usp=sharing" className="main-btn">
+                        <a href="/CV-Caio-Fernandes-Castilho.pdf" download className="main-btn">
                             <span className="btn-text">Download CV</span>
                             <span className="btn-icon"><i className="fas fa-download"></i></span>
                         </a>
@@ -513,7 +513,7 @@ export default function HomePages(){
                                 <textarea name="" id="" cols={15} rows={8} placeholder="Escreva uma mensagem aqui..."></textarea>
                             </div>
                             <div className="submit-btn">
-                                <a href="https://drive.google.com/drive/folders/1lo9Wzz8nSBUjlvL98thgrkWffwfBkj3F?usp=sharing" className="main-btn">
+                                <a href="/CV-Caio-Fernandes-Castilho.pdf" download className="main-btn">
                                     <span className="btn-text">Download CV</span>
                                     <span className="btn-icon"><i className="fas fa-download"></i></span>
                                 </a>
