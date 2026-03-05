@@ -454,13 +454,22 @@ section {
 .portfolios .portfolio-item {
   position: relative;
   border-radius: 15px;
+  overflow: hidden; /* evita que imagem/texto "vaze" para fora */
+  background: transparent;
 }
-.portfolios .portfolio-item img {
+.portfolios .portfolio-item .image {
   width: 100%;
   height: 300px;
-  -o-object-fit: unset;
-     object-fit: unset;
+  overflow: hidden;
+}
+.portfolios .portfolio-item .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* cobre o card sem distorcer */
   border-radius: 15px;
+  transition: transform 0.45s ease;
 }
 .portfolios .portfolio-item .hover-items {
   width: 100%;
@@ -474,20 +483,24 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1.2rem;
+  box-sizing: border-box;
   opacity: 0;
-  transform: scale(0);
+  transform: scale(0.96) translateY(6px);
   transition: all 0.4s ease-in-out;
+  z-index: 5;
 }
 .portfolios .portfolio-item .hover-items h3 {
   font-size: 1.5rem;
   color: var(--font-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 .portfolios .portfolio-item .hover-items .icons {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0.6rem;
 }
 .portfolios .portfolio-item .hover-items .icons .icon {
   background-color: var(--color-primary);
@@ -497,14 +510,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .portfolios .portfolio-item .hover-items .icons .icon i {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--font-color);
-  margin: 0 1rem;
+  margin: 0;
 }
 .portfolios .portfolio-item .hover-items .icons .icon:hover {
   background-color: var(--color-white);
@@ -512,12 +525,63 @@ section {
 .portfolios .portfolio-item .hover-items .icons .icon:hover i {
   color: var(--color-primary);
 }
-
-.portfolio-item:hover .hover-items {
+.portfolios .portfolio-item .hover-items .icons .icon:hover {
+  transform: translateY(-3px);
+}
+.portfolios .portfolio-item .hover-items p {
+  padding: 0.6rem 0;
+  color: var(--font-color);
+  text-align: center;
+  max-height: 40%;
+  overflow: auto;
+}
+.portfolios .portfolio-item {
+  /* .hover-items */
+}
+.portfolios {
+  /* .portfolio-item */
+  /* hover effect: reveal overlay and slightly scale image */
+}
+.portfolios .portfolio-item:hover img { /* targets inner img via cascade */
+  transform: scale(1.04);
+}
+.portfolios .portfolio-item:hover .hover-items {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) translateY(0);
 }
 
+/* Mobile: mostra o conteúdo do card abaixo da imagem em vez de overlay escondido */
+@media (max-width: 768px) {
+  .portfolios {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-item .image {
+    height: 220px;
+  }
+  .portfolio-item .hover-items {
+    position: relative;
+    background-color: transparent;
+    opacity: 1;
+    transform: none;
+    padding: 1rem 0 2rem 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .portfolio-item .hover-items h3 {
+    text-align: left;
+    margin-left: 0.5rem;
+  }
+  .portfolio-item .hover-items p {
+    text-align: left;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    max-height: none;
+    overflow: visible;
+  }
+  .portfolio-item .hover-items .icons {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
 .blogs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

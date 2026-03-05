@@ -231,12 +231,12 @@ export default function HomePages(){
             <div className="portfolios">
                 <div className="portfolio-item">
                 <div className="image">
-                    <img src="/vigia.png" alt="VigiaSoft" />
+                    <img src="/VigiaSoft.png" alt="VigiaSoft" />
                 </div>
                 <div className="hover-items">
                     <h3>VigiaSoft — App & Backend</h3>
                     <div className="icons">
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="icon">
+                    <a href="/Case-VigiaSoft.pdf" target="_blank" rel="noopener noreferrer" className="icon">
                         <i className="fab fa-github"></i>
                     </a>
                     </div>
@@ -249,12 +249,12 @@ export default function HomePages(){
                 </div>
                 <div className="portfolio-item">
                 <div className="image">
-                    <img src="/nfeproduto.png" alt="NFeProduto" />
+                    <img src="/NFeProduto.png" alt="NFeProduto" />
                 </div>
                 <div className="hover-items">
                     <h3>NFeProduto — Emissão NF-e</h3>
                     <div className="icons">
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="icon">
+                    <a href="/Case-NFeProduto.pdf" target="_blank" rel="noopener noreferrer" className="icon">
                         <i className="fab fa-github"></i>
                     </a>
                     </div>
@@ -266,12 +266,12 @@ export default function HomePages(){
                 </div>
                 <div className="portfolio-item">
                 <div className="image">
-                    <img src="/softnfse.png" alt="SoftNFSe" />
+                    <img src="/SoftNFSe.png" alt="SoftNFSe" />
                 </div>
                 <div className="hover-items">
                     <h3>SoftNFSe — Integração Municipal</h3>
                     <div className="icons">
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="icon">
+                    <a href="/Case-SoftNFSe.pdf" target="_blank" rel="noopener noreferrer" className="icon">
                         <i className="fab fa-github"></i>
                     </a>
                     </div>
@@ -282,7 +282,7 @@ export default function HomePages(){
                 </div>
                 </div>
             </div>
-            </section>
+        </section>
         <section className={`section sec4 header ${toggle === "blogs" ? "active":""}`} id="blogs">
             <div className="blogs-content">
                 <div className="main-title">
@@ -423,7 +423,7 @@ export default function HomePages(){
         <div onClick={()=>handleSection("about")} className={`control ${toggle === "about" ? "active-btn":""}`} data-id="about">
             <i className="fas fa-user"></i>
         </div>
-        <div onClick={()=>handleSection("portfolio")} className={`control ${toggle === "portfolio" ? "active-btn":""}`} data-id="portifolio">
+        <div onClick={()=>handleSection("portfolio")} className={`control ${toggle === "portfolio" ? "active-btn":""}`} data-id="portfólio">
             <i className="fas fa-briefcase"></i>
         </div>
         <div onClick={()=>handleSection("blogs")} className={`control ${toggle === "blogs" ? "active-btn":""}`} data-id="blogs">

@@ -10,9 +10,9 @@ export default function MyApp({Component, pageProps} : AppProps<any>){
     <>
         <Head>
             <meta name="theme-color" content="#FFFFFF"/>
-            <title>Portifolio</title>
+            <title>Portfólio</title>
             <meta name="description" content="Informaçoes profissionais" />
-            <link rel="shortcut icon" href="/imagem/c.png" />
+            <link rel="shortcut icon" href="/imagem/PortfolioIcon.png" />
             
         </Head>
         <Component {...pageProps}/> 
